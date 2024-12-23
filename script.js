@@ -1,3 +1,8 @@
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('.main'),
+  smooth: true
+});
+
 function counter() {
     var count = setInterval(() => {
         var c = parseInt($('.counter').text());
@@ -78,4 +83,3 @@ function animateText() {
   
   counter()
   animateText();
-  
