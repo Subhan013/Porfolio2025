@@ -8,17 +8,18 @@ function counter() {
             $('.preloader').addClass('active');
             valueSet();
             homePage();
+            hero2()
         }
     },30)
   }
   
-  function valueSet() {
+function valueSet() {
     gsap.set(".hero .row h1", {y: 210});
     gsap.set("nav ul li", {y: -20, opacity:0} )
     gsap.set(".hero .upperrow p", {y: 20, opacity:0} )
     gsap.set(".hero .lowerrow .hero-footer-txt p", {y: 20, opacity:0} )
     gsap.set(".hero .lowerrow p", {y: 20, opacity:0} )
-  }
+}
   
   function homePage() {
     var tl = gsap.timeline()

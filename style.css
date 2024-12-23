@@ -19,15 +19,9 @@ html,body{
   .preloader {
     position: fixed;
     top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     background: #070707;
@@ -35,12 +29,9 @@ html,body{
   }
   
   .preloader.active {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
-    -webkit-transition: ease-in-out 2s;
+    transform: translateY(-100vh);
     transition: ease-in-out 2s;
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
+    transition-delay: 1s;
   }
   
   .preloader::before {
@@ -64,16 +55,17 @@ html,body{
   
   .hide {
     opacity: 0;
-    -webkit-transition: 1s;
     transition: 1s;
     pointer-events: none;
   }
 
 nav{
+    position: fixed;
     width: 100%;
     height: 80px;
     border-bottom: 1px solid #000;
     padding: 30px 30px;
+    background-color: #ffffff;
 }
 
 nav ul{
@@ -88,10 +80,17 @@ nav ul li a{
     text-decoration: none;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
 .hero .upperrow p{
     position: absolute;
-    left: 90%;
-    padding-top: 15px;
+    left: 92%;
+    top: 15%;
     color: #444444dd;
     font-size: 12px;
 }
@@ -114,7 +113,7 @@ nav ul li a{
 }
 
 .hero #row1 h1{
-    padding: 5vw;
+    padding: 2vw;
 }
 
 .hero #row2 h1{
@@ -140,4 +139,43 @@ nav ul li a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.hero2 {
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero2 .upperrow p{
+    text-align: center;
+    color: #303030;
+    font-size: 5vw;
+    padding: 2vw;
+    font-weight: 700;
+    border-bottom: 1px solid #000000;
+}
+
+.hero2 .main-txt{
+    text-align: left;
+    font-size: 250%;
+}
+
+.hero2 .main-txt span{
+    color: #00c75a;
+    font-family: mazius;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+
+@media (max-width: 480px) {
+
+    .hero2 .main-txt {
+        font-size: 120%; /* Further adjust font size for very small screens */
+    }
 }
