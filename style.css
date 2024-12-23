@@ -20,6 +20,7 @@ html,body{
     position: fixed;
     top: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -40,17 +41,19 @@ html,body{
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.03);
   }
-  
+
   .preloader .counter {
-    position: relative;
+    position: absolute;
+    top: -100%;
+    right: 20px;
     color: #00dc63;
-    font-size: 16em;
+    font-size: 4em;
     z-index: 1;
   }
   
   .preloader .counter::after {
     content: '%';
-    font-size: .5em;
+    font-size: 0.5em;
   }
   
   .hide {
@@ -143,44 +146,19 @@ nav ul li a{
 }
 
 
-
-.showcase {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 50px 0;
-}
-
-.showcase-item {
-    position: relative;
-    width: 45%; /* Adjust as needed */
-    overflow: hidden;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.showcase-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.showcase-text {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.5em;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .showcase-item {
         width: 90%; /* Full width on smaller screens */
         margin: 10px 0;
+    }
+    .preloader .text {
+        font-size: 3em;
+    }
+    .preloader .counter {
+        font-size: 2.5em;
+        top: 10px;
+        right: 10px;
     }
 }
 
@@ -211,4 +189,49 @@ nav ul li a{
     font-family: mazius;
     color: #00dc63;
     font-style: italic;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #070707;
+    z-index: 1000;
+}
+
+.preloader .text {
+    font-size: 5em;
+    color: white;
+    margin-top: 20px;
+}
+
+.preloader .counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #00dc63;
+    font-size: 4em;
+    z-index: 1;
+}
+
+.preloader .counter::after {
+    content: '%';
+    font-size: 0.5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .preloader .text {
+        font-size: 3em;
+    }
+    .preloader .counter {
+        font-size: 2.5em;
+        top: 10px;
+        right: 10px;
+    }
 }

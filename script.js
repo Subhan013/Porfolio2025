@@ -8,11 +8,10 @@ function counter() {
             $('.preloader').addClass('active');
             valueSet();
             homePage();
-            hero2()
-        }
-    },30)
-  }
-  
+          }
+        }, 30);
+}
+
 function valueSet() {
     gsap.set(".hero .row h1", {y: 210});
     gsap.set("nav ul li", {y: -20, opacity:0} )
@@ -20,6 +19,22 @@ function valueSet() {
     gsap.set(".hero .lowerrow .hero-footer-txt p", {y: 20, opacity:0} )
     gsap.set(".hero .lowerrow p", {y: 20, opacity:0} )
 }
+
+function animateText() {
+    console.log("Animating text...");
+    gsap.fromTo(".preloader .text", {
+        opacity: 0,
+        y: -50,
+        scale: 0.5,
+    }, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        ease: Expo.easeInOut
+    });
+}
+
   
   function homePage() {
     var tl = gsap.timeline()
@@ -62,4 +77,5 @@ function valueSet() {
 
   
   counter()
+  animateText();
   
