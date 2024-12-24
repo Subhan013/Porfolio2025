@@ -106,9 +106,6 @@ function hero2() {
         scrollTrigger: {
             trigger: '.hero2 .right-skills h1',
             scroller: '.main',
-            markers: true,
-            toggleActions: 'play none none reverse',
-
         }
     });
 }
