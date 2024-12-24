@@ -3,6 +3,24 @@ const scroll = new LocomotiveScroll({
   smooth: true
 });
 
+// ScrollTrigger integration with Locomotive Scroll
+ScrollTrigger.scrollerProxy('.main', {
+    scrollTop(value) {
+        return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    }
+});
+
+// Ensure ScrollTrigger updates on scroll
+scroll.on('scroll', ScrollTrigger.update);
+
+// Refresh ScrollTrigger on load
+window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+});
+
 function counter() {
     var count = setInterval(() => {
         var c = parseInt($('.counter').text());
@@ -23,10 +41,10 @@ function valueSet() {
     gsap.set(".hero .upperrow p", {y: 20, opacity:0} )
     gsap.set(".hero .lowerrow .hero-footer-txt p", {y: 20, opacity:0} )
     gsap.set(".hero .lowerrow p", {y: 20, opacity:0} )
+    gsap.set(".hero2 .right-skills h1", {y: 100, opacity:0} )
 }
 
 function animateText() {
-    console.log("Animating text...");
     gsap.fromTo(".preloader .text", {
         opacity: 0,
         y: -50,
@@ -40,8 +58,7 @@ function animateText() {
     });
 }
 
-  
-  function homePage() {
+function homePage() {
     var tl = gsap.timeline()
     
     tl.to("nav ul li",{
@@ -76,10 +93,26 @@ function animateText() {
       delay: -1,
       stagger: 0.1,
       opacity: 1
-    })
-  
-  }
+    });
+}
 
-  
-  counter()
-  animateText();
+function hero2() {
+    gsap.to(".hero2 .right-skills h1", {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.6,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+            trigger: '.hero2 .right-skills h1',
+            scroller: '.main',
+            markers: true,
+            toggleActions: 'play none none reverse',
+
+        }
+    });
+}
+
+counter();
+animateText();
+hero2();
