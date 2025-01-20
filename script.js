@@ -136,7 +136,7 @@ hero2();
 
 // Enhanced Preloader with Fade Out
 window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
+  const preloader = document.querySelector('.preloader');
     
     // Add initial animations
     setTimeout(() => {
@@ -150,11 +150,11 @@ window.addEventListener('load', () => {
         }, 800);
         valueSet();
         homePage();
-    }, 1500);
-});
-
-// Prevent scrolling while preloader is active
-document.body.style.overflow = 'hidden';
+      }, 1500);
+    });
+    
+    // Prevent scrolling while preloader is active
+    document.body.style.overflow = 'hidden';
 
 // Magnetic and glitch effect for skill items
 document.querySelectorAll('.skill-item').forEach(item => {
