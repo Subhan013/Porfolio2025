@@ -1,33 +1,29 @@
-// Initialize Locomotive Scroll
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('.main'),
-  smooth: true,
-});
+function init() {
+    gsap.registerPlugin(ScrollTrigger);
 
-// ScrollTrigger integration with Locomotive Scroll
-ScrollTrigger.scrollerProxy('.main', {
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".main"),
+  smooth: true
+});
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(".main", {
   scrollTop(value) {
-      return arguments.length
-          ? scroll.scrollTo(value, 0, 0)
-          : scroll.scroll.instance.scroll.y;
-  },
+    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+  }, 
   getBoundingClientRect() {
-      return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-      };
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
   },
+  pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
 });
 
-// Ensure ScrollTrigger updates on scroll
-scroll.on('scroll', ScrollTrigger.update);
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
 
-// Refresh ScrollTrigger on load
-window.addEventListener('load', () => {
-  ScrollTrigger.refresh();
-});
+}
+
+init()
 
 // Counter Animation
 function counter() {
