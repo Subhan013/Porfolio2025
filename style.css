@@ -316,7 +316,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 50%;
+    gap: 10vh;
   }
 
   .footer-left h1 {
