@@ -696,7 +696,7 @@ nav{
 } */
 
 .elem h1{
-    font-size: 7.6vw;
+    font-size: 5vw;
     transition: all ease-in-out 0.3s;
     font-weight: 100;
 }
