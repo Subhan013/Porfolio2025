@@ -19,11 +19,52 @@ body, html{
     background: #ffffff;
     z-index: 98;
     mix-blend-mode: difference;
-    transition: background-image ease 0.5s;
+    transition: ease-out  0.2s;
     background-position: center;
     background-size: cover;
     pointer-events: none;
 }
+
+.menu{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    height: 0vh;
+}
+
+.icon{
+    /* background: #670000; */
+    position: absolute;
+    padding: 40px 30px;
+    right: 0%;
+}
+
+.close-menu {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.close-menu .line {
+    background-color: #ffffff;
+    width: 2rem;
+    height: 3px;
+    position: absolute;
+}
+
+#close1 {
+    transform: rotate(45deg);
+}
+#close2 {
+    transform: rotate(-45deg);
+}
+
 
 #main{
     background-color: #e1e1e1;
@@ -85,6 +126,16 @@ nav{
     background: #fff;
     margin: 2.5px;
     transition: 0.5s;
+}
+
+.menu-toggle.active #line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active #line2 {
+    opacity: 0;
+}
+.menu-toggle.active #line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .hero{

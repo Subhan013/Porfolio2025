@@ -1,8 +1,3 @@
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#main'),
-//     smooth: true
-// });
-
 var crsr = document.querySelector('.cursor')
 var main = document.querySelector('#main')
 var page1Vid = document.querySelector('.page1 video')
@@ -213,3 +208,30 @@ ScrollTrigger.matchMedia({
     }
   });
   
+
+  gsap.set(close_btn, { display: "none" });
+  var menu = document.querySelector(".menu");
+var menu_btn = document.querySelector(".menu-toggle");
+var close_btn = document.querySelector(".close-menu");
+
+gsap.set(close_btn, { display: "none" }); // 👈 hide on page load
+
+// open menu
+menu_btn.addEventListener("click", () => {
+    gsap.to(menu, {
+        height: "100vh",
+        duration: 0.5,
+        ease: "power2.out",
+        onStart: () => gsap.set(close_btn, { display: "flex" })
+    });
+});
+
+// close menu
+close_btn.addEventListener("click", () => {
+    gsap.to(menu, {
+        height: "0vh",
+        duration: 0.5,
+        ease: "power2.in",
+        onComplete: () => gsap.set(close_btn, { display: "none" })
+    });
+});
