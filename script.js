@@ -90,8 +90,9 @@ tl.from(".hero2",{
     scale: 0.7,
     scrollTrigger:{
         trigger: ".hero2",
-        start: "top 90%",
+        start: "top 100%",
         end: "bottom 140%",
+        marker: true,
         scrub: true
     }
 })
@@ -113,7 +114,7 @@ tl.from(".hero3",{
     scale: 0.7,
     scrollTrigger:{
         trigger: ".hero3",
-        start: "top 97%",
+        start: "top 100%",
         end: "bottom 100%",
         scrub: true
     }
