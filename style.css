@@ -39,7 +39,9 @@ nav{
 .nav-links{
     display: flex;
     gap: 30px;
-    background: #ffffff4d;
+
+    background-color: #ffffff86;
+    backdrop-filter: blur(3px);
     padding: 20px 60px;
     border-radius: 50px;
 }
