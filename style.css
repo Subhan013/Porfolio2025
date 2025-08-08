@@ -466,5 +466,11 @@ nav{
     .hero2 .text-container .lower-text h2{
         font-weight: 100;
     }
+    .hero3{
+        height: 50vh;
+    }
+    .hero3 h1{
+        width: 100%;
+    }
   }
   
