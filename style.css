@@ -646,18 +646,24 @@ nav{
     justify-content: center;
   }
 
+  .elem h1{
+    font-size: 1rem;
+  }
+
   .elem:hover h1{
     transform: none !important;
     color: inherit;
 }
 }
+
+
   
 .page4{
     min-height: 100vh;
     width: 100%;
     position: relative;
     z-index: 99;
-    padding: 0 300px;
+    /* padding: 0 300px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -696,7 +702,7 @@ nav{
 } */
 
 .elem h1{
-    font-size: 5vw;
+    font-size: 5.4rem;
     transition: all ease-in-out 0.3s;
     font-weight: 100;
 }
