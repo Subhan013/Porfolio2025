@@ -457,6 +457,9 @@ nav{
     .scroll-background{
         gap: 2%;
     }
+    .hero2{
+        height: 120vh;
+    }
     .hero2 .text-container{
         padding: 150px 15px;
     }
@@ -467,10 +470,12 @@ nav{
         font-weight: 100;
     }
     .hero3{
-        height: 50vh;
+        height: 60vh;
     }
     .hero3 h1{
         width: 100%;
+        font-size: 7vw;
+        padding: 150px 50px;
     }
   }
   
