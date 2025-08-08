@@ -636,6 +636,20 @@ nav{
     font-size: 4.5vw;
     font-weight: 100;
   }
+  .elem img{
+    display: none;
+  }
+  .elem-t-2{
+    display: none;
+  }
+  .page4{
+    justify-content: center;
+  }
+
+  .elem:hover h1{
+    transform: none !important;
+    color: inherit;
+}
 }
   
 .page4{
