@@ -175,3 +175,32 @@ gsap.to(".card6",{
         scrub: true
     }
 })
+
+ScrollTrigger.matchMedia({
+    // Desktop
+    "(min-width: 769px)": function () {
+      gsap.to(".card", {
+        scrollTrigger: {
+          trigger: ".card",
+          start: "top 20%",
+          end: "+=500", // desktop value
+          scrub: true
+        },
+        y: -100
+      });
+    },
+  
+    // Mobile
+    "(max-width: 768px)": function () {
+      gsap.to(".card", {
+        scrollTrigger: {
+          trigger: ".card",
+          start: "top 10%",   // mobile value
+          end: "+=300",       // shorter scroll for smaller cards
+          scrub: true
+        },
+        y: -50
+      });
+    }
+  });
+  
