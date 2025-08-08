@@ -454,5 +454,8 @@ nav{
     .scroll-row{
         font-size: 15vw;
     }
+    .scroll-background{
+        gap: 2%;
+    }
   }
   
