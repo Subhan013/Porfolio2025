@@ -3,6 +3,15 @@
 //     smooth: true
 // });
 
+var crsr = document.querySelector('.cursor')
+var main = document.querySelector('#main')
+var page1Vid = document.querySelector('.page1 video')
+
+document.addEventListener('mousemove',function(dets) {
+    crsr.style.left = dets.x+-10+'px'
+    crsr.style.top = dets.y+-10+'px'
+})
+
 const images = document.querySelectorAll(".trail-img");
 const mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 const positions = Array.from(images).map(() => ({ x: mouse.x, y: mouse.y }));
