@@ -109,8 +109,8 @@ tl.from(".hero3",{
     scale: 0.7,
     scrollTrigger:{
         trigger: ".hero3",
-        start: "top 95%",
-        end: "bottom 110%",
+        start: "top 97%",
+        end: "bottom 100%",
         scrub: true
     }
 })
