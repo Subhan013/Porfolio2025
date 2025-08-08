@@ -509,6 +509,12 @@ nav{
   }
 
   @media (max-width: 768px) {
+    .cursor{
+        display: none;
+    }
+    .cursor-images{
+        display: none;
+    }
     .nav-links{
         display: none;
     }
