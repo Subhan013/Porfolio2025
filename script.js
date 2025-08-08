@@ -209,29 +209,43 @@ ScrollTrigger.matchMedia({
   });
   
 
-  gsap.set(close_btn, { display: "none" });
-  var menu = document.querySelector(".menu");
-var menu_btn = document.querySelector(".menu-toggle");
-var close_btn = document.querySelector(".close-menu");
-
-gsap.set(close_btn, { display: "none" }); // 👈 hide on page load
-
-// open menu
-menu_btn.addEventListener("click", () => {
-    gsap.to(menu, {
+  document.addEventListener("DOMContentLoaded", () => {
+    var menu = document.querySelector(".menu");
+    var menu_btn = document.querySelector(".menu-toggle");
+    var close_btn =document.querySelector(".close-menu")
+  
+    if (!menu || !menu_btn || !close_btn) {
+      console.error("Menu elements missing");
+      return;
+    }
+  
+    gsap.set(close_btn, { display: "none" }); // hide on page load
+  
+    menu_btn.addEventListener("click", () => {
+      console.log("Menu open clicked");
+      gsap.to(menu, {
         height: "100vh",
         duration: 0.5,
         ease: "power2.out",
-        onStart: () => gsap.set(close_btn, { display: "flex" })
+        onStart: () => {
+          gsap.set(close_btn, { display: "flex" });
+          document.body.style.overflow = "hidden";  // disable page scroll
+        }
+      });
     });
-});
-
-// close menu
-close_btn.addEventListener("click", () => {
-    gsap.to(menu, {
+  
+    close_btn.addEventListener("click", () => {
+      console.log("Close button clicked");
+      gsap.to(menu, {
         height: "0vh",
         duration: 0.5,
         ease: "power2.in",
-        onComplete: () => gsap.set(close_btn, { display: "none" })
+        onComplete: () => {
+          gsap.set(close_btn, { display: "none" });
+          document.body.style.overflow = "";  // enable page scroll
+        }
+      });
     });
-});
+  });
+  
+  console.log(close_btn);  // Should log the element
