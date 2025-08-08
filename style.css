@@ -457,5 +457,14 @@ nav{
     .scroll-background{
         gap: 2%;
     }
+    .hero2 .text-container{
+        padding: 150px 15px;
+    }
+    .hero2 .text-container .upper-text h1{
+        font-weight: 100;
+    }
+    .hero2 .text-container .lower-text h2{
+        font-weight: 100;
+    }
   }
   
