@@ -144,6 +144,11 @@ nav{
   .scroll-row.reverse {
     animation: scroll-right 20s linear infinite;
   }
+
+  @keyframes rotateText {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
   
   @keyframes scroll-left {
     0% {
@@ -435,3 +440,22 @@ nav{
     color: #0b0c0f;
     outline: none;
   }
+
+  @media (max-width: 768px) {
+    .nav-links{
+        display: none;
+    }
+    .hero .hero-text .name{
+        font-size: 10vw;
+    }
+    .hero .hero-text .title{
+        font-size: 4vw;
+    }
+    .scroll-row{
+        font-size: 15vw;
+    }
+    .scroll-background{
+        gap: 5%;
+    }
+  }
+  
