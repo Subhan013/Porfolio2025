@@ -38,6 +38,7 @@ html {
   background: #000;
   height: 0vh;
   overflow: hidden;
+  z-index: 18;
 }
 
 .icon {
