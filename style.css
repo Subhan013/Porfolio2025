@@ -245,7 +245,7 @@ nav{
 
 .hero2{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background: #101114;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -273,7 +273,7 @@ nav{
 
 .hero2 .text-container .lower-text{
     display: flex;
-    font-size: 1rem;
+    font-size: 1.5vw;
     width: 100%;
     font-weight: 500;   
     line-height: 200%;
