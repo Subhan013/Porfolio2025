@@ -281,7 +281,7 @@ nav {
 .hero2 .text-container {
   display: flex;
   grid-column-gap: 7.5rem;
-  grid-row-gap: 14vh;
+  grid-row-gap: 20vh;
   flex-flow: column;
   max-width: 60rem;
   padding: 150px 0;
@@ -296,7 +296,7 @@ nav {
 
 .hero2 .text-container .lower-text {
   display: flex;
-  font-size: 1.5vw;
+  font-size: 1.4rem;
   width: 100%;
   font-weight: 500;
   line-height: 200%;
@@ -595,6 +595,7 @@ nav {
 
   .scroll-background {
     gap: 2%;
+    height: 100vh;
   }
 
   .hero2 {
@@ -612,6 +613,8 @@ nav {
 
   .hero2 .text-container .lower-text h2 {
     font-weight: 100;
+    font-size: 1.7rem;
+    line-height: 1.5;
   }
 
   .hero3 {
