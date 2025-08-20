@@ -228,6 +228,7 @@
 .contact-section {
   padding: 6rem 2rem;
   color: #fff;
+  min-height: 200vh;
 }
 
 .big-title {
@@ -239,15 +240,20 @@
 
 .contact-container {
   display: flex;
-  gap: 30vw;
+  gap: 20vw;
   flex-wrap: wrap;
 }
 
 .contact-box {
-  max-width: 370px;
+  max-width: 30vw;
   text-align: left;
   line-height: 1.6;
   line-height: 1.6;
+}
+
+.box1 {
+  position: sticky;
+  top: 15vh;
 }
 
 .contact-box h2 {
@@ -300,4 +306,8 @@
   .contact-box {
     text-align: center;
   }
+}
+
+.hero2{
+  height: 100vh;
 }
