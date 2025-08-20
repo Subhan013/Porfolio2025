@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    /* background: #212121; */
+  }
+  
+  #main {
+    position: relative;
+    background: #000;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background: #ffffff;
+    z-index: 98;
+    mix-blend-mode: difference;
+    transition: ease-out 0.2s;
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0vh;
+    background-color: black;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  
+  
+  .icon {
+    /* background: #670000; */
+    position: absolute;
+    padding: 40px 30px;
+    right: 0%;
+  }
+  
+  .close-menu {
+    position: absolute;
+    top: 40px;
+    right: 28px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  
+  .close-menu .line {
+    background-color: #ffffff;
+    width: 2.4rem;
+    height: 3px;
+    position: absolute;
+  }
+  
+  #close1 {
+    transform: rotate(45deg);
+  }
+  
+  #close2 {
+    transform: rotate(-45deg);
+  }
+  
+  
+  #main {
+    background-color: #e1e1e1;
+  }
+  
+  nav {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    position: fixed;
+    z-index: 99;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .logo h1 {
+    color: #000;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  
+    background-color: #ffffff86;
+    backdrop-filter: blur(3px);
+    padding: 20px 60px;
+    border-radius: 50px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+  }
+  
+  .menu-toggle {
+    background: #000;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 7px;
+  }
+  
+  .menu-toggle .line {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin: 2.5px;
+    transition: 0.5s;
+  }
+  
+  .menu-toggle.active #line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active #line2 {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active #line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
