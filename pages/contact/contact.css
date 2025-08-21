@@ -12,11 +12,8 @@ html {
 }
 
 #main {
-  position: relative;
-  background: #000;
+  background: #111;
   z-index: 10;
-  width: 100%;
-  height: 100%;
 }
 
 .cursor {
@@ -77,10 +74,6 @@ html {
 
 #close2 {
   transform: rotate(-45deg);
-}
-
-#main {
-  background-color: #e1e1e1;
 }
 
 nav {
@@ -203,7 +196,7 @@ nav {
 
 .hero {
   width: 100%;
-  height: 120vh;
+  height: 130vh;
   background: #111;
 }
 
@@ -211,37 +204,42 @@ nav {
 .contact-section {
   padding: 6rem 4rem;
   color: #fff;
-  min-height: 200vh; /* ensures scrolling space */
+  height: 180vh;
+  /* ensures scrolling space */
 }
 
 .big-title {
   font-size: 10rem;
   font-weight: 500;
   margin-bottom: 3rem;
+  margin-top: 2vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact-container {
   display: flex;
-  align-items: flex-start;   /* important for sticky */
-  gap: 5rem;                 /* normal gap instead of vw */
+  align-items: flex-start;
+  gap: 10rem;
+  position: sticky;
+  top: 15vh;
 }
 
 .contact-box {
   flex: 1;
-  max-width: 40%;           /* keep them side by side */
+  max-width: 40%;
+  /* keep them side by side */
   text-align: left;
   line-height: 1.6;
 }
 
 .contact-box h2 {
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .contact-box p {
   margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 2.3vw;
 }
 
 .contact-box:nth-child(1) p:nth-child(4) {
@@ -276,11 +274,13 @@ nav {
   .big-title {
     font-size: 3.5rem;
   }
+
   .contact-container {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
+
   .contact-box {
     max-width: 100%;
     text-align: center;
@@ -288,6 +288,95 @@ nav {
 }
 
 .hero2 {
-  height: 100vh;
   width: 100%;
+  height: 120vh;
+  /* Match the height of .hero */
+  background: #ffffff;
+  /* Change this to your desired background color */
+  display: flex;
+  /* Use flexbox for layout */
+  align-items: center;
+  /* Center items vertically */
+  justify-content: space-between;
+  /* Space items evenly */
+  padding: 6rem 2rem;
+  /* Add some padding */
+  border-radius: 20px;
+}
+
+.hero2 .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero2 .right form {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.hero2 .right form:hover {
+  box-shadow: 2px 2px 2px 20px rgb(230, 230, 230);
+}
+
+.hero2 .right form h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.hero2 .right form .contact-details {
+  margin-top: 100px;
+}
+
+.contact-inputs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-inputs input {
+  width: 40%;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.details {
+  width: 100%;
+  height: 200px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  padding: 15px 20px;  /* pushes text/placeholder inside */
+  text-align: left;    /* ensures left aligned */
+  line-height: normal; /* prevent vertical centering */
+}
+
+
+
+.hero2 .left {
+  width: 50%;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.hero2 .left .tag {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.hero2 .left h1 {
+  font-size: 4vw;
+  font-weight: 100;
+}
+
+.hero2 .left .para {
+  font-size: 1.6vw;
+  line-height: 1.7;
+  gap: 100px;
 }

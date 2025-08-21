@@ -45,3 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  gsap.from(".hero2",{
+    scale: 0.7,
+    scrollTrigger:{
+        trigger: ".hero2",
+        start: "top 120%",
+        end: "bottom 130%",
+        marker: true,
+        scrub: true
+    }
+})
