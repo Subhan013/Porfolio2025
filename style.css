@@ -751,6 +751,11 @@ nav {
   color: #fff;
 }
 
+.text-div a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .elem img {
   position: absolute;
   opacity: 0;
