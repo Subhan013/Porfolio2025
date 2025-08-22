@@ -619,11 +619,53 @@ nav {
     width: 100%;
   }
 
-  /* .hero3 {
-    height: 100vh;
-    width: 100vh;
-    background: #030303;
-  } */
+  .hero2{
+    height: auto;
+    display: block;
+    padding: 6rem 0.6rem;
+  }
+
+  .hero2 .left{
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero2 .left h1{
+    font-size: 3rem;
+  }
+
+  .para p{
+    font-size: 1.4rem;
+  }
+
+  .hero2 .right{
+    width: 100%;
+    padding: 0;
+    justify-content: start;
+  }
+
+  .hero2 .right form{
+    padding: 0px;
+    width: 100%;
+  }
+
+  .hero2 .right form:hover{
+    box-shadow: none;
+  }
+
+  .details{
+    font-size: 1rem;
+    height: 250px;
+  }
+
+  .contact-inputs{
+    /* display: block; */
+    gap: 30px !important;
+  }
+
+  .contact-inputs input{
+    width: 100%;
+  }
 
   .footer .footer-left {
     gap: 0;
