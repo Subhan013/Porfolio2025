@@ -110,6 +110,8 @@ nav {
 
 .nav-links {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
 
   background-color: #ffffff86;
@@ -122,6 +124,13 @@ nav {
   text-decoration: none;
   color: #000000;
   font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-links a:hover {
+  padding: 1px 20px;
+  background: #edbfff;
+  border-radius: 20px;
 }
 
 .menu-toggle {
