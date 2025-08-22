@@ -282,7 +282,7 @@ nav {
   .big-title {
     font-size: 3.5rem;
   }
-  
+
   .contact-container {
     flex-direction: column;
     align-items: center;
@@ -334,6 +334,14 @@ nav {
 
 .hero2 .right form .contact-details {
   margin-top: 100px;
+}
+
+.web-input {
+  width: 40%;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid;
+  padding: 10px;
 }
 
 .contact-inputs {
@@ -393,7 +401,7 @@ nav {
   gap: 100px;
 }
 
-.contant{
+.contant {
   position: sticky;
   top: 13vh;
 }
@@ -540,7 +548,7 @@ nav {
   outline: none;
 }
 
-.hero3{
+.hero3 {
   height: 100vh;
   width: 100%;
   background: #030303;
@@ -550,7 +558,7 @@ nav {
   .logo {
     font-size: 15px;
   }
-  
+
   .scroll-background {
     position: absolute;
     top: 0;
@@ -565,24 +573,24 @@ nav {
     gap: 2vw;
     pointer-events: none;
   }
-  
+
   .cursor {
     display: none;
   }
-  
+
   .cursor-images {
     display: none;
   }
-  
+
   .nav-links {
     display: none;
   }
-  
+
   .big-title {
     font-size: 6rem;
     margin-bottom: 2rem;
   }
-  
+
   .hero .contact-section {
     display: flex;
     flex-direction: column;
@@ -608,7 +616,7 @@ nav {
   .contact-box:nth-child(1) p:nth-child(4) {
     color: #505050;
     font-size: 1rem;
-}
+  }
 
   .box2 p {
     margin-bottom: 0rem;
@@ -619,51 +627,55 @@ nav {
     width: 100%;
   }
 
-  .hero2{
+  .hero2 {
     height: auto;
     display: block;
     padding: 6rem 0.6rem;
   }
 
-  .hero2 .left{
+  .hero2 .left {
     width: 100%;
     padding: 0;
   }
 
-  .hero2 .left h1{
+  .hero2 .left h1 {
     font-size: 3rem;
   }
 
-  .para p{
+  .para p {
     font-size: 1.4rem;
   }
 
-  .hero2 .right{
+  .hero2 .right {
     width: 100%;
     padding: 0;
     justify-content: start;
   }
 
-  .hero2 .right form{
+  .hero2 .right form {
     padding: 0px;
     width: 100%;
   }
 
-  .hero2 .right form:hover{
+  .hero2 .right form:hover {
     box-shadow: none;
   }
 
-  .details{
+  .details {
     font-size: 1rem;
     height: 250px;
   }
 
-  .contact-inputs{
+  .web-input{
+    width: 100%;
+  }
+
+  .contact-inputs {
     /* display: block; */
     gap: 30px !important;
   }
 
-  .contact-inputs input{
+  .contact-inputs input {
     width: 100%;
   }
 
