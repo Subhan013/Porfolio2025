@@ -251,6 +251,7 @@ nav {
 
 .contact-box:nth-child(1) p:nth-child(4) {
   color: #505050;
+  font-size: 1.5rem;
 }
 
 .contact-box a {
@@ -281,7 +282,7 @@ nav {
   .big-title {
     font-size: 3.5rem;
   }
-
+  
   .contact-container {
     flex-direction: column;
     align-items: center;
@@ -549,7 +550,7 @@ nav {
   .logo {
     font-size: 15px;
   }
-
+  
   .scroll-background {
     position: absolute;
     top: 0;
@@ -564,23 +565,24 @@ nav {
     gap: 2vw;
     pointer-events: none;
   }
-
+  
   .cursor {
     display: none;
   }
-
+  
   .cursor-images {
     display: none;
   }
-
+  
   .nav-links {
     display: none;
   }
-
+  
   .big-title {
     font-size: 6rem;
-}
-
+    margin-bottom: 2rem;
+  }
+  
   .hero .contact-section {
     display: flex;
     flex-direction: column;
@@ -601,6 +603,16 @@ nav {
   .contact-box p {
     margin-bottom: 0rem;
     font-size: 2rem;
+  }
+
+  .contact-box:nth-child(1) p:nth-child(4) {
+    color: #505050;
+    font-size: 1rem;
+}
+
+  .box2 p {
+    margin-bottom: 0rem;
+    font-size: 1.5rem;
   }
 
   .contact-container {

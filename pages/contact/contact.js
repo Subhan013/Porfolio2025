@@ -56,3 +56,54 @@ document.addEventListener("DOMContentLoaded", () => {
         scrub: true
     }
 })
+
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+
+  // Desktop
+  "(min-width: 1025px)": function () {
+    gsap.from(".box", {
+      y: 200,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".box",
+        start: "top 80%", // Desktop start point
+        end: "top 20%",
+        scrub: true
+      }
+    });
+  },
+
+  // Tablet
+  "(min-width: 768px) and (max-width: 1024px)": function () {
+    gsap.from(".box", {
+      y: 150,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".box",
+        start: "top 90%", // Tablet start point
+        end: "top 40%",
+        scrub: true
+      }
+    });
+  },
+
+  // Mobile
+  "(max-width: 767px)": function () {
+    gsap.from(".box", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".box",
+        start: "top 95%", // Mobile start point
+        end: "top 50%",
+        scrub: true
+      }
+    });
+  }
+
+});
