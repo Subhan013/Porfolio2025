@@ -337,8 +337,8 @@ nav {
 }
 
 .web-input {
-  width: 40%;
-  height: 40px;
+  width: 45%;
+  height: 45px;
   border-radius: 30px;
   border: 1px solid;
   padding: 10px;
@@ -351,7 +351,7 @@ nav {
 }
 
 .contact-inputs input {
-  width: 40%;
+  width: 45%;
   height: 40px;
   border-radius: 30px;
   border: 1px solid;
@@ -628,8 +628,9 @@ nav {
   }
 
   .hero2 {
+    flex-direction: column; /* instead of display:block */
+    gap: 40px; /* now gap will work */
     height: auto;
-    display: block;
     padding: 6rem 0.6rem;
   }
 

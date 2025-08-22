@@ -24,8 +24,12 @@
                     src="https://d33wubrfki0l68.cloudfront.net/446dbcb401541c44dd5c9d523d9c1174d2c46101/31a1e/assets/home/home-strategy-1.webp"
                     alt="">
                 <div class="text-div">
-                    <a href="#"><h1>Projects</h1></a>
-                    <a href="#"><h1 class="elem-t-2">Projects</h1></a>
+                    <a href="#">
+                        <h1>Projects</h1>
+                    </a>
+                    <a href="#">
+                        <h1 class="elem-t-2">Projects</h1>
+                    </a>
                     <img style="right: 10%; margin-top: -10%;"
                         src="https://d33wubrfki0l68.cloudfront.net/48c24c14de8c09fc70e500419be651739d7e869a/3acf8/assets/home/home-strategy-2.webp"
                         alt="">
@@ -36,8 +40,12 @@
                     src="https://d33wubrfki0l68.cloudfront.net/babd0439587342125264c1f7a9726c0ba3145e67/a99f8/assets/home/home-identity-1.webp"
                     alt="">
                 <div class="text-div">
-                    <a href="#"><h1>About Me</h1></a>
-                    <a href="#"><h1 class="elem-t-2">About Me</h1></a>
+                    <a href="#">
+                        <h1>About Me</h1>
+                    </a>
+                    <a href="#">
+                        <h1 class="elem-t-2">About Me</h1>
+                    </a>
                 </div>
                 <img style="right: 10%; margin-top: 10%;"
                     src="https://d33wubrfki0l68.cloudfront.net/21028610849a1a71b126b1bfd4bc37f0d4ad3ee1/2942e/assets/home/home-identity-2.webp"
@@ -48,8 +56,12 @@
                     src="https://d33wubrfki0l68.cloudfront.net/3401770635e95968e300d88f8b9479ecbc008eeb/be2e5/assets/home/home-experience-1.webp"
                     alt="">
                 <div class="text-div">
-                    <a href="/pages/contact/contact.html"><h1>Contact</h1></a>
-                    <a href="/pages/contact/contact.html"><h1 class="elem-t-2">Contact</h1></a>
+                    <a href="/pages/contact/contact.html">
+                        <h1>Contact</h1>
+                    </a>
+                    <a href="/pages/contact/contact.html">
+                        <h1 class="elem-t-2">Contact</h1>
+                    </a>
                 </div>
                 <img style="right: 10%; margin-top: -10%;"
                     src="https://d33wubrfki0l68.cloudfront.net/188bb09da2a445d08ac5b4f706711772e50e8a17/e100a/assets/home/home-experience-2.webp"
@@ -112,34 +124,43 @@
                     <button class="tag">Request Project</button>
                     <h1>Hi</h1>
                     <div class="para">
-                        <p>Want to get in touch? The contact form is the easiest way for us to connect. It helps us understand your
+                        <p>Want to get in touch? The contact form is the easiest way for us to connect. It helps us
+                            understand your
                             request right away and gives us the first important details about your project.</p><br>
-            
-                            <p>If you’d prefer, you can also reach out directly by email or phone—we’re always happy to hear from you.
-                            For bigger projects, we can share a short project briefing guide to help you prepare for our first
-                            conversation. A clear briefing helps us give you the best results right from the start.</p><br>
-            
-                            <p>Either way, we’re excited to learn more about your ideas and look forward to working with you!</p>
+
+                        <p>If you’d prefer, you can also reach out directly by email or phone—we’re always happy to hear
+                            from you.
+                            For bigger projects, we can share a short project briefing guide to help you prepare for our
+                            first
+                            conversation. A clear briefing helps us give you the best results right from the start.</p>
+                        <br>
+
+                        <p>Either way, we’re excited to learn more about your ideas and look forward to working with
+                            you!</p>
                     </div>
                 </div>
             </div>
             <div class="right">
-                <form action="#">
+                <form id="contact-form">
                     <h2>Tell us about your project</h2>
-                    <textarea name="" class="details" placeholder="Briefly describe your project"></textarea>
+                    <textarea name="project" class="details" placeholder="Briefly describe your project"
+                        required></textarea>
+
                     <h2 style="margin-top: 100px;">Is there already a website?</h2>
-                    <input type="text" class="web-input" placeholder="(Optional)">
+                    <input type="text" name="website" class="web-input" placeholder="(Optional)">
+
                     <div class="contact-details">
                         <h2>Contact details</h2>
                         <div class="contact-inputs">
-                            <input type="text" name="" id="" placeholder="First Name*">
-                            <input type="text" name="" id="" placeholder="Last Name*">
-                            <input type="email" name="" id="" placeholder="Email*">
-                            <input type="text" name="" id="" placeholder="Phone Number*">
+                            <input type="text" name="first_name" placeholder="First Name*" required>
+                            <input type="text" name="last_name" placeholder="Last Name*" required>
+                            <input type="email" name="email" placeholder="Email*" required>
+                            <input type="text" name="phone" placeholder="Phone Number*">
                         </div>
-                        <input class="submit" type="submit">
+                        <input class="submit" type="submit" value="Send">
                     </div>
                 </form>
+
             </div>
         </div>
 
@@ -179,7 +200,26 @@
         integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="contact.js"></script>
+    <script>
+        (function () {
+            emailjs.init("q_A7EOxf55qjuPTKq"); // from EmailJS dashboard
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_spulqkt", "template_5ltb9fe", this)
+                .then(function () {
+                    alert("✅ Message sent successfully!");
+                    document.getElementById("contact-form").reset();
+                }, function (error) {
+                    alert("❌ Failed to send message: " + JSON.stringify(error));
+                });
+        });
+    </script>
+
 </body>
 
 </html>
