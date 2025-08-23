@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="about.css">
 </head>
+
 <body>
-    
+
 
     <div class="cursor"></div>
     <div class="menu">
@@ -23,8 +25,12 @@
                     src="https://d33wubrfki0l68.cloudfront.net/446dbcb401541c44dd5c9d523d9c1174d2c46101/31a1e/assets/home/home-strategy-1.webp"
                     alt="">
                 <div class="text-div">
-                    <a href="#"><h1>Projects</h1></a>
-                    <a href="#"><h1 class="elem-t-2">Projects</h1></a>
+                    <a href="#">
+                        <h1>Projects</h1>
+                    </a>
+                    <a href="#">
+                        <h1 class="elem-t-2">Projects</h1>
+                    </a>
                     <img style="right: 10%; margin-top: -10%;"
                         src="https://d33wubrfki0l68.cloudfront.net/48c24c14de8c09fc70e500419be651739d7e869a/3acf8/assets/home/home-strategy-2.webp"
                         alt="">
@@ -35,8 +41,12 @@
                     src="https://d33wubrfki0l68.cloudfront.net/babd0439587342125264c1f7a9726c0ba3145e67/a99f8/assets/home/home-identity-1.webp"
                     alt="">
                 <div class="text-div">
-                    <a href="#"><h1>About Me</h1></a>
-                    <a href="#"><h1 class="elem-t-2">About Me</h1></a>
+                    <a href="#">
+                        <h1>About Me</h1>
+                    </a>
+                    <a href="#">
+                        <h1 class="elem-t-2">About Me</h1>
+                    </a>
                 </div>
                 <img style="right: 10%; margin-top: 10%;"
                     src="https://d33wubrfki0l68.cloudfront.net/21028610849a1a71b126b1bfd4bc37f0d4ad3ee1/2942e/assets/home/home-identity-2.webp"
@@ -47,8 +57,12 @@
                     src="https://d33wubrfki0l68.cloudfront.net/3401770635e95968e300d88f8b9479ecbc008eeb/be2e5/assets/home/home-experience-1.webp"
                     alt="">
                 <div class="text-div">
-                    <a href="pages/contact/contact.html"><h1>Contact</h1></a>
-                    <a href="pages/contact/contact.html"><h1 class="elem-t-2">Contact</h1></a>
+                    <a href="/pages/contact/contact.html">
+                        <h1>Contact</h1>
+                    </a>
+                    <a href="/pages/contact/contact.html">
+                        <h1 class="elem-t-2">Contact</h1>
+                    </a>
                 </div>
                 <img style="right: 10%; margin-top: -10%;"
                     src="https://d33wubrfki0l68.cloudfront.net/188bb09da2a445d08ac5b4f706711772e50e8a17/e100a/assets/home/home-experience-2.webp"
@@ -58,11 +72,35 @@
     </div>
 
     <div id="main">
-        
+        <nav>
+            <div class="logo">
+                <h1>SubhanDhedhi</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pages/about/about.html">About</a>
+                <a href="#">Services</a>
+                <a href="/pages/contact/contact.html">Contact</a>
+            </div>
+            <div class="menu-toggle">
+                <div id="line1" class="line"></div>
+                <div id="line2" class="line"></div>
+                <div id="line3" class="line"></div>
+            </div>
+        </nav>
     </div>
 
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="about.js"></script>
 
 </body>
+
 </html>

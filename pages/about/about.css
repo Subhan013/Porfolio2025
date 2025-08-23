@@ -165,3 +165,67 @@
   .menu-toggle.active #line3 {
     transform: rotate(-45deg) translate(5px, -5px);
   }
+
+  .drop-menu {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    /* padding: 0 300px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1.5px solid #ffffff;
+  }
+  
+  .elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .text-div {
+    height: 110px;
+    overflow: hidden;
+    z-index: 99;
+    color: #fff;
+  }
+  
+  .text-div a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .elem img {
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    width: 18%;
+    transform: translateY(10%) rotate(2deg);
+  }
+  
+  /* .elem img:nth-child(1){
+      left: 2%;
+  }
+  
+  .elem img:nth-child(3){
+      right: 2%;
+  } */
+  
+  .elem h1 {
+    font-size: 7rem;
+    transition: all ease-in-out 0.3s;
+    font-weight: 100;
+  }
+  
+  .elem:hover h1 {
+    transform: translateY(-100%);
+    color: #edbfff;
+  }
+  
+  .elem:hover img {
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+  }
