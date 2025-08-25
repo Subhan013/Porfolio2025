@@ -14,8 +14,9 @@ html {
 
 #main {
   position: relative;
-  background: #000;
+  background: #000000;
   z-index: 10;
+  height: auto;
 }
 
 .cursor {
@@ -38,7 +39,7 @@ html {
   left: 0;
   width: 100vw;
   height: 0vh;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   overflow: hidden;
   z-index: 9999;
 }
@@ -417,15 +418,16 @@ nav {
 }
 
 .footer {
-  position: fixed;
+  z-index: 10; /* Adjusted z-index to ensure it appears above hero5 */
+  position: relative; /* Change to relative to allow it to be positioned normally */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 6rem 2rem;
   width: 100%;
   margin: 0 auto;
-  height: 80vh;
-  bottom: 0;
+  height: 80vh; /* You may want to adjust this height */
+  bottom: 0; /* This can be removed if you want it to be positioned normally */
   color: #ffffff;
 }
 

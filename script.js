@@ -1,3 +1,34 @@
+// Register GSAP plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Initialize locomotive scroll
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#main"), // your scroll container
+  smooth: true
+});
+
+// Tell ScrollTrigger to use these proxy methods for "#main"
+ScrollTrigger.scrollerProxy("#main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  }, 
+  getBoundingClientRect() {
+    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+  },
+  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+});
+
+// Update ScrollTrigger on scroll
+locoScroll.on("scroll", ScrollTrigger.update);
+
+// Refresh ScrollTrigger after everything loads
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
+
+
+
 var crsr = document.querySelector('.cursor')
 var main = document.querySelector('#main')
 var page1Vid = document.querySelector('.page1 video')
@@ -92,6 +123,7 @@ tl.from(".hero2",{
         trigger: ".hero2",
         start: "top 100%",
         end: "bottom 140%",
+        scroller: "#main",
         marker: true,
         scrub: true
     }
@@ -116,6 +148,7 @@ tl.from(".hero3",{
         trigger: ".hero3",
         start: "top 100%",
         end: "bottom 100%",
+        scroller: "#main",
         scrub: true
     }
 })
@@ -127,6 +160,7 @@ gsap.to(".card1",{
         trigger:".card1",
         start: "top 15%",
         end: "bottom 15%",
+        scroller: "#main",
         scrub: true
     }
 })
@@ -137,6 +171,7 @@ gsap.to(".card2",{
         trigger:".card2",
         start: "top 15%",
         end: "bottom 15%",
+        scroller: "#main",
         scrub: true
     }
 })
@@ -147,6 +182,7 @@ gsap.to(".card3",{
         trigger:".card3",
         start: "top 15%",
         end: "bottom 15%",
+        scroller: "#main",
         scrub: true
     }
 })
@@ -157,6 +193,7 @@ gsap.to(".card4",{
         trigger:".card4",
         start: "top 15%",
         end: "bottom 15%",
+        scroller: "#main",
         scrub: true
     }
 })
@@ -167,6 +204,7 @@ gsap.to(".card5",{
         trigger:".card5",
         start: "top 15%",
         end: "bottom 15%",
+        scroller: "#main",
         scrub: true
     }
 })
@@ -177,6 +215,7 @@ gsap.to(".card6",{
         trigger:".card6",
         start: "top 60%",
         end: "bottom 60%",
+        scroller: "#main",
         scrub: true
     }
 })
