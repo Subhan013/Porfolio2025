@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
   
+    gsap.set(menu, { pointerEvents: "none" }); // Initially disable pointer events for the menu
     gsap.set(close_btn, { display: "none" }); // hide on page load
   
     menu_btn.addEventListener("click", () => {
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.out",
         onStart: () => {
           gsap.set(close_btn, { display: "flex" });
+          gsap.set(menu, { pointerEvents: "auto" }); // Enable pointer events when menu is open
           document.body.style.overflow = "hidden";  // disable page scroll
         }
       });
@@ -40,19 +42,56 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.in",
         onComplete: () => {
           gsap.set(close_btn, { display: "none" });
+          gsap.set(menu, { pointerEvents: "none" }); // Disable pointer events when menu is closed
           document.body.style.overflow = "";  // enable page scroll
         }
       });
     });
   });
 
+
+// 1) Lock both images EXACTLY to the center using xPercent/yPercent
+gsap.set([".img-left", ".img-right"], {
+    xPercent: -50,
+    yPercent: -50,
+    left: "50%",
+    top: "50%",
+    position: "absolute",
+    rotate: 0,
+    force3D: true
+  });
+  
+  // 2) Animate them apart on scroll (starting from the centered position)
+  gsap.to(".img-left", {
+    scrollTrigger: {
+      trigger: ".hero1",
+      start: "top 0%",
+      end: "bottom 100%",
+      scrub: true
+    },
+    x: "-15vw",        // move left from center
+    rotate: -8,
+    ease: "power2.inOut"
+  });
+  
+  gsap.to(".img-right", {
+    scrollTrigger: {
+      trigger: ".hero1",
+      start: "top 0%",
+      end: "bottom 100%",
+      scrub: true
+    },
+    x: "15vw",         // move right from center
+    rotate: 8,
+    ease: "power2.inOut"
+  });
+  
   gsap.from(".hero2",{
-    x: -1350,
+    scale:0,
     scrollTrigger: {
         trigger: ".hero2",
-        start: "top 90%",
-        end: "bottom 100%",
-        markers: true,
-        scrub: true
+        start: "top 150%",
+        end: "bottom 80%",
+        scrub: true,
       }
-  })
+})

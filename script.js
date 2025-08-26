@@ -1,5 +1,3 @@
-// Register GSAP plugin
-gsap.registerPlugin(ScrollTrigger);
 
 // Initialize locomotive scroll
 const locoScroll = new LocomotiveScroll({
@@ -259,6 +257,7 @@ ScrollTrigger.matchMedia({
       return;
     }
   
+    gsap.set(menu, { pointerEvents: "none" }); // Initially disable pointer events for the menu
     gsap.set(close_btn, { display: "none" }); // hide on page load
   
     menu_btn.addEventListener("click", () => {
@@ -269,6 +268,7 @@ ScrollTrigger.matchMedia({
         ease: "power2.out",
         onStart: () => {
           gsap.set(close_btn, { display: "flex" });
+          gsap.set(menu, { pointerEvents: "auto" }); // Enable pointer events when menu is open
           document.body.style.overflow = "hidden";  // disable page scroll
         }
       });
@@ -282,10 +282,10 @@ ScrollTrigger.matchMedia({
         ease: "power2.in",
         onComplete: () => {
           gsap.set(close_btn, { display: "none" });
+          gsap.set(menu, { pointerEvents: "none" }); // Disable pointer events when menu is closed
           document.body.style.overflow = "";  // enable page scroll
         }
       });
     });
   });
   
-  console.log(close_btn);  // Should log the element

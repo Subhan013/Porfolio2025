@@ -96,7 +96,7 @@ nav {
   align-items: center;
   padding: 0px 20px;
   position: fixed;
-  z-index: 99;
+  z-index: 1000; /* Increased z-index to ensure it's above other elements */
 }
 
 .logo {
@@ -126,6 +126,7 @@ nav {
   color: #000000;
   font-size: 18px;
   transition: 0.5s;
+  pointer-events: auto; /* Ensure pointer events are active for links */
 }
 
 .nav-links a:hover {
@@ -414,6 +415,8 @@ nav {
 
 .hero5 {
   height: 80vh;
+  z-index: 100;
+  position: relative;
   background: #000000;
 }
 
