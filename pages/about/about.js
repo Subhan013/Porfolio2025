@@ -95,3 +95,23 @@ gsap.set([".img-left", ".img-right"], {
         scrub: true,
       }
 })
+
+const text = document.querySelector("#reveal-text");
+const letters = text.textContent.split(""); // split into letters
+text.innerHTML = ""; 
+
+// wrap each letter in span
+letters.forEach(letter => {
+  text.innerHTML += `<span>${letter}</span>`;
+});
+
+gsap.to("#reveal-text span", {
+  color: "#fff",
+  stagger: 0.1, // reveal one by one
+  scrollTrigger: {
+    trigger: "#reveal-text",
+    start: "top 60%",
+    end: "bottom top",
+    scrub: true
+  }
+});

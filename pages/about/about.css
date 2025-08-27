@@ -11,6 +11,7 @@
     position: relative;
     height: auto;
     z-index: -10;
+    background: #000;
   }
   
   .cursor {
@@ -79,7 +80,7 @@
   
   
   #main {
-    background-color: #e1e1e1;
+    background-color: #ffffff;
   }
   
   nav {
@@ -264,9 +265,30 @@
   }
   
   .hero2{
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     background: #000;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .hero2 .contant-container{
+    width: 80%;
+  }
+
+  .hero2 h1 {
+    font-size: 3vw;
+    /* font-weight: 900; */
+    line-height: 1.7;
+    color: #111;
+  }
+
+  .hero2 h1 span {
+    display: inline-block;
+    color: #111;
+    transition: color 0.3s linear;
   }
