@@ -415,23 +415,22 @@ nav {
 
 .hero5 {
   height: 80vh;
-  z-index: 100;
-  position: relative;
-  background: #000000;
+  width: 100%;
+  background: #111;
 }
 
 .footer {
-  z-index: 10; /* Adjusted z-index to ensure it appears above hero5 */
-  position: relative; /* Change to relative to allow it to be positioned normally */
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 6rem 2rem;
   width: 100%;
   margin: 0 auto;
-  height: 80vh; /* You may want to adjust this height */
-  bottom: 0; /* This can be removed if you want it to be positioned normally */
+  height: 80vh;
+  bottom: 0;
   color: #ffffff;
+  z-index: 0;
 }
 
 
