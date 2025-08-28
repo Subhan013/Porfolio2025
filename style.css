@@ -689,6 +689,14 @@ nav {
     width: 100%;
   }
 
+  .hero5{
+    display: none;
+  }
+
+  .footer{
+    position: relative;
+  }
+
   .footer .footer-left {
     gap: 0;
     display: flex;
