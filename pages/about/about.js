@@ -110,7 +110,7 @@ gsap.to("#reveal-text span", {
   stagger: 0.1, // reveal one by one
   scrollTrigger: {
     trigger: "#reveal-text",
-    start: "top 60%",
+    start: "top 100%",
     end: "bottom top",
     scrub: true
   }
