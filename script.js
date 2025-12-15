@@ -207,11 +207,10 @@ gsap.to(".card5",{
     }
 })
 gsap.to(".card6",{
-    scale: 0.7,
     opacity: 0,
     scrollTrigger:{
         trigger:".card6",
-        start: "top 60%",
+        start: "top 5%",
         end: "bottom 60%",
         scroller: "#main",
         scrub: true
