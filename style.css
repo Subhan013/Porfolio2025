@@ -14,7 +14,6 @@ html {
 
 #main {
   position: relative;
-  background: #000000;
   z-index: 10;
   height: auto;
 }
@@ -31,6 +30,7 @@ html {
   background-position: center;
   background-size: cover;
   pointer-events: none;
+  z-index: 9999;
 }
 
 .menu {
@@ -349,8 +349,9 @@ nav {
 }
 
 .hero3-2 .card6 {
-  background: #1F2126;
+  background: #0b0c0f;
   width: 100%;
+  color: #e1e1e1;
 }
 
 .hero3-2 .card6 .projects {

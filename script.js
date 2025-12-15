@@ -199,14 +199,15 @@ gsap.to(".card5",{
     scale: 0.7,
     opacity: 0,
     scrollTrigger:{
-        trigger:".card5",
-        start: "top 15%",
-        end: "bottom 15%",
-        scroller: "#main",
-        scrub: true
+      trigger:".card5",
+      start: "top 15%",
+      end: "bottom 15%",
+      scroller: "#main",
+      scrub: true
     }
-})
-gsap.to(".card6",{
+  })
+  gsap.to(".card6",{
+    scale: 0.7,
     opacity: 0,
     scrollTrigger:{
         trigger:".card6",
