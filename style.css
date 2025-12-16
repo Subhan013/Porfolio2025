@@ -342,7 +342,7 @@ nav {
 }
 
 .hero3-2 .card {
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   position: sticky;
   top: 10vh;
@@ -350,7 +350,7 @@ nav {
 
 .hero3-2 .card6 {
   background: #0b0c0f;
-  width: 100%;
+  width: 100vw;
   color: #e1e1e1;
 }
 
@@ -377,7 +377,7 @@ nav {
 }
 
 .hero3-2 .card img {
-  width: 80vw;
+  width: 85vw;
 }
 
 .hero4 {
